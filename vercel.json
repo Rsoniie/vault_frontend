@@ -1,0 +1,57 @@
+{
+    "version": 2,
+    "rewrites": [
+      {
+        "source": "/login",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/signup",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/home",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/about",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/author_profile/:author_name",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/profile",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/upload",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/feedback",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/verify",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/api/:path*",
+        "destination": "https://xyz.com/api/:path*"
+      }
+    ],
+    "headers": [
+      {
+        "source": "/(.*)",
+        "headers": [
+          { "key": "Cache-Control", "value": "no-store" },
+          { "key": "Access-Control-Allow-Origin", "value": "*" },
+          { "key": "Access-Control-Allow-Methods", "value": "GET, POST, OPTIONS" },
+          { "key": "Access-Control-Allow-Headers", "value": "X-Requested-With, Content-Type" }
+        ]
+      }
+    ]
+  }
+  
