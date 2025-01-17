@@ -13,22 +13,20 @@ const Author_profile = () => {
     const current_user = localStorage.getItem("user");
 
 
-    // const {author_name } = useParams();
-    // console.log(parsed_user.username);
-
     const {author_name} = useParams();
 
-    // console.log(username);
+    // const name = author_name;
 
+    console.log(author_name);
+    // const username = author_name
 
 
     useEffect(() => {
         // Replace this URL with your API endpoint
         const fetchProfile = async () => {
-            try {
-
-                
-                const response = await axios.get(`${import.meta.env.VITE_API}/profile/${author_name}`);
+            try {  
+              console.log("Get into try block");
+                const response = await axios.get(`${import.meta.env.VITE_API}/user/profile/${author_name}`);
                 setProfile(response.data);
                 setFiles(response.data.all_files);
                 setLoading(false);
@@ -40,7 +38,7 @@ const Author_profile = () => {
         };
 
         fetchProfile();
-    }, []);
+    }, [author_name]);
 
     if (loading) {
         return <div>Loading...</div>;
