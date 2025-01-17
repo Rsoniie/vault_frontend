@@ -24,7 +24,7 @@
       {
         "source": "/profile",
         "destination": "/index.html"
-      },
+      }, 
       {
         "source": "/upload",
         "destination": "/index.html"
