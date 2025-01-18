@@ -27,6 +27,7 @@ const FileList = () => {
     fetchFiles();
   }, []);
 
+  console.log(files);
   if (loading) return <p>Loading files...</p>;
   if (error) return <p className="text-red-500">{error}</p>;
 
