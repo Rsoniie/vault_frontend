@@ -48,6 +48,7 @@ const FileList = () => {
                 src="https://cdn.mos.cms.futurecdn.net/25mEf9H2CYfpdX53bWHjK-1200-80.jpg"
                 alt=""
               />
+
             </a>
             <div className="p-5">
               <a href="#">
