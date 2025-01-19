@@ -59,7 +59,7 @@ const Author_profile = () => {
                 />
                 <h1 className="text-2xl text-gray-500 font-bold mt-2">{profile.user.username}</h1>
                 <h2 className="text-base md:text-xl text-gray-500 font-bold">
-                   {profile.user.email}
+                   {profile.user.profession}
                     <a
                         href="#"
                         target="_blank"

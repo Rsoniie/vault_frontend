@@ -32,6 +32,7 @@ function App() {
         <Route path="/upload" element={<FileUpload/>}/>
         <Route path="/feedback" element={<FeedbackForm/>}/>
         <Route path="/verify" element={<VerifyOTP/>}/>
+        <Route path="/logout" element={<Navigate replace to="/login" />} />
       </Routes>
     </Router>
       

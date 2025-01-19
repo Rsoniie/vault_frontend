@@ -204,7 +204,13 @@ const ProfileCard = () => {
     useEffect(() => {
         const fetchProfile = async () => {
             try {
-                const response = await axios.get(`${import.meta.env.VITE_API}/user/profile/${username}`); 
+
+                const token = localStorage.getItem('token');
+                const response = await axios.get(`${import.meta.env.VITE_API}/user/profile/${username}`, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                      }
+                }); 
                 setProfile(response.data);
                 setFiles(response.data.all_files);
                 setLoading(false);

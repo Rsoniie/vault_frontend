@@ -13,9 +13,15 @@ const FileList = () => {
   useEffect(() => {
     const fetchFiles = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_API}/pdf/all_files`);
-        setFiles(response.data.all_files); // Store fetched files in state
-        console.log(response.data); // Log the fetched data for debugging
+
+        const token = localStorage.getItem('token');
+        const response = await axios.get(`${import.meta.env.VITE_API}/pdf/all_files`, {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+        setFiles(response.data.all_files); 
+        console.log(response.data);
       } catch (err) {
         setError("Failed to fetch files");
         console.error(err);
