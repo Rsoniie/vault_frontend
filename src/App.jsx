@@ -13,6 +13,7 @@ import { BrowserRouter as Router, Route, Link, Routes, Navigate} from "react-rou
 import ConditionalNavbar from "./services/Conditional_nav";
 import VerifyOTP from "./pages/verification_page";
 import Author_profile from "./pages/author_profile";
+import By_Sub from "./pages/by_subject";
 
 
 
@@ -33,6 +34,7 @@ function App() {
         <Route path="/feedback" element={<FeedbackForm/>}/>
         <Route path="/verify" element={<VerifyOTP/>}/>
         <Route path="/logout" element={<Navigate replace to="/login" />} />
+        <Route path="/by_sub/:subject" element={<By_Sub/>}/>
       </Routes>
     </Router>
       
